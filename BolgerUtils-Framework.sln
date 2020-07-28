@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.BolgerUtils.Framework
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.BolgerUtils.Framework.WebForms", "Tests.BolgerUtils.Framework.WebForms\Tests.BolgerUtils.Framework.WebForms.csproj", "{036E01EB-80CE-49DF-B5E3-087F5D1ACA5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.BolgerUtils.Framework.EnumDisplay", "Tests.BolgerUtils.Framework.EnumDisplay\Tests.BolgerUtils.Framework.EnumDisplay.csproj", "{343E36A4-9ACB-493D-A7D5-D48AE1B80F40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{036E01EB-80CE-49DF-B5E3-087F5D1ACA5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{036E01EB-80CE-49DF-B5E3-087F5D1ACA5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{036E01EB-80CE-49DF-B5E3-087F5D1ACA5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{343E36A4-9ACB-493D-A7D5-D48AE1B80F40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{343E36A4-9ACB-493D-A7D5-D48AE1B80F40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{343E36A4-9ACB-493D-A7D5-D48AE1B80F40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{343E36A4-9ACB-493D-A7D5-D48AE1B80F40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +67,7 @@ Global
 		{C5E1FA8C-D538-4D91-9115-A3F8167F74AA} = {323403AC-A925-44DE-8558-48988FE65EC1}
 		{4866E5C0-6AE0-4022-B585-5314086D0A7E} = {323403AC-A925-44DE-8558-48988FE65EC1}
 		{036E01EB-80CE-49DF-B5E3-087F5D1ACA5E} = {323403AC-A925-44DE-8558-48988FE65EC1}
+		{343E36A4-9ACB-493D-A7D5-D48AE1B80F40} = {323403AC-A925-44DE-8558-48988FE65EC1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E71D9FB1-B1A5-4A9D-8F1F-C1EAB6ACC3CC}
