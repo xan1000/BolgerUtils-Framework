@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icon.png" />
+    <None Include="../LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
