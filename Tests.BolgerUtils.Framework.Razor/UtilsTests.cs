@@ -2,7 +2,6 @@
 using BolgerUtils.Framework.Razor;
 using Tests.BolgerUtils.Framework.Razor.Models;
 using Xunit;
-using ExtensionUtils = BolgerUtils.ExtensionUtils;
 
 namespace Tests.BolgerUtils.Framework.Razor
 {
@@ -184,9 +183,42 @@ namespace Tests.BolgerUtils.Framework.Razor
 
         private void Test_Parse_Implementation(string expected, TestModel model)
         {
-            expected = ExtensionUtils.RemoveRedundantWhitespace(expected);
-            Assert.Equal(expected, ExtensionUtils.RemoveRedundantWhitespace(Utils.Parse(TestPath, model)));
-            Assert.Equal(expected, ExtensionUtils.RemoveRedundantWhitespace(Utils.Parse(TestFileInfo, model)));
+            expected = RemoveRedundantWhitespace(expected);
+            Assert.Equal(expected, RemoveRedundantWhitespace(Utils.Parse(TestPath, model)));
+            Assert.Equal(expected, RemoveRedundantWhitespace(Utils.Parse(TestFileInfo, model)));
+        }
+
+        // https://stackoverflow.com/a/37592018/9798310
+        private static string RemoveRedundantWhitespace(string item)
+        {
+            var length = item.Length;
+            var array = item.ToCharArray();
+            var arrayIndex = 0;
+            var skip = false;
+            for(var i = 0; i < length; i++)
+            {
+                var character = array[i];
+                switch(character)
+                {
+                    case '\r':
+                        // Remove all \r.
+                        continue;
+                    case ' ':
+                    case '\t':
+                    case '\n':
+                        if(skip)
+                            continue;
+                        array[arrayIndex++] = character;
+                        skip = true;
+                        break;
+                    default:
+                        array[arrayIndex++] = character;
+                        skip = false;
+                        break;
+                }
+            }
+
+            return new string(array, 0, arrayIndex);
         }
     }
 }
